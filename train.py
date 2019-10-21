@@ -18,6 +18,8 @@ learning_rate = 0.0001  # 一般小于0.0001
 train_dir = 'input_data'  # 训练样本的读入路径
 logs_train_dir = 'save'  # logs存储路径
 
+import time
+start=time.time()
 # train, train_label = input_data.get_files(train_dir)
 train, train_label, val, val_label = input_data.get_files(train_dir, 0.3)
 # 训练数据及标签
@@ -75,3 +77,7 @@ except tf.errors.OutOfRangeError:
 
 finally:
     coord.request_stop()
+
+end = time.time()
+run_time=end-start
+print("运行时间：{}分钟{}秒".format(run_time//60,run_time%60))
