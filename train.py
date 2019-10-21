@@ -4,6 +4,9 @@ import numpy as np
 import tensorflow as tf
 import input_data
 import model
+import sys
+
+sys.setdefaultencoding('utf-8')
 
 # 变量声明
 N_CLASSES = 4  # 四种花类型
@@ -80,4 +83,4 @@ finally:
 
 end = time.time()
 run_time=end-start
-print("runtime：{}min{}s".format(run_time//60,run_time%60))
+print("runtime:{}min{}s".format(run_time//60,run_time%60))
