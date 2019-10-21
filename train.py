@@ -80,4 +80,4 @@ finally:
 
 end = time.time()
 run_time=end-start
-print("运行时间：{}分钟{}秒".format(run_time//60,run_time%60))
+print("runtime：{}min{}s".format(run_time//60,run_time%60))
